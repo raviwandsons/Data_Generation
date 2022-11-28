@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20220909 16:09:58.979" rpa="false" schemaversion="3">
+<suite id="s1" name="Abctcone" source="C:\Users\rwankhede\PycharmProjects\Data_Generation\Testcases\abctcone.robot">
+<test id="s1-t1" name="Getting Data..." line="67">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<msg timestamp="20220909 16:09:59.358" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20220909 16:09:59.357" endtime="20220909 16:10:06.833"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220909 16:10:06.834" endtime="20220909 16:10:06.955"/>
+</kw>
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20220909 16:10:06.955" endtime="20220909 16:10:06.983"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Key_query}</var>
+<arg>query</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220909 16:10:06.984" level="INFO">${Key_query} = query</msg>
+<status status="PASS" starttime="20220909 16:10:06.983" endtime="20220909 16:10:06.984"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Key_filename}</var>
+<arg>filename</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220909 16:10:06.984" level="INFO">${Key_filename} = filename</msg>
+<status status="PASS" starttime="20220909 16:10:06.984" endtime="20220909 16:10:06.984"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Key_categorycode}</var>
+<arg>categorycode</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220909 16:10:06.985" level="INFO">${Key_categorycode} = categorycode</msg>
+<status status="PASS" starttime="20220909 16:10:06.985" endtime="20220909 16:10:06.985"/>
+</kw>
+<kw name="Get Input Query">
+<var>${InputData}</var>
+<arg>${InputFileName}</arg>
+<msg timestamp="20220909 16:10:06.991" level="FAIL">No keyword with name 'Get Input Query' found.</msg>
+<status status="FAIL" starttime="20220909 16:10:06.991" endtime="20220909 16:10:06.991"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${MyList}</var>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.992" endtime="20220909 16:10:06.992"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${MyList}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.992" endtime="20220909 16:10:06.993"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${MyList}</arg>
+<arg>Foo1</arg>
+<arg>Value1</arg>
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.993" endtime="20220909 16:10:06.993"/>
+</kw>
+<for flavor="IN">
+<var>${x}</var>
+<value>@{InputData}</value>
+<iter>
+<var name="${x}"/>
+<kw name="Get From Dictionary" library="Collections">
+<var>${SearchQuery}</var>
+<arg>${x}</arg>
+<arg>${Key_query}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.993" endtime="20220909 16:10:06.993"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${SearchQuery}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.994" endtime="20220909 16:10:06.994"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${file_name}</var>
+<arg>${x}</arg>
+<arg>${Key_filename}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.994" endtime="20220909 16:10:06.994"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${file_name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.994" endtime="20220909 16:10:06.994"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${category_code}</var>
+<arg>${x}</arg>
+<arg>${Key_categorycode}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.994" endtime="20220909 16:10:06.994"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${category_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.994" endtime="20220909 16:10:06.994"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${category_code}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.994" endtime="20220909 16:10:06.994"/>
+</kw>
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.994" endtime="20220909 16:10:06.994"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SearchTextField}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.994" endtime="20220909 16:10:06.994"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SearchTextField}</arg>
+<arg>${SearchQuery}</arg>
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.994" endtime="20220909 16:10:06.995"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${SearchGoogleBtn}</arg>
+<doc>Waits until element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.995" endtime="20220909 16:10:06.995"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${SearchGoogleBtn}</arg>
+<doc>Sets focus to element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.995" endtime="20220909 16:10:06.995"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SearchGoogleBtn}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.995" endtime="20220909 16:10:06.995"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>files not set</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.995" endtime="20220909 16:10:06.995"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${FileName}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.995" endtime="20220909 16:10:06.995"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${sheetcheck}</var>
+<arg>${false}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.995" endtime="20220909 16:10:06.995"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<var>${sheetcheck}</var>
+<arg>'${Filename}' in ${MyList}</arg>
+<arg>Set Variable</arg>
+<arg>${true}</arg>
+<arg>ELSE</arg>
+<arg>Set Variable</arg>
+<arg>${false}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.995" endtime="20220909 16:10:06.995"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${sheetcheck}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.995" endtime="20220909 16:10:06.995"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${sheetcheck} == ${false}</arg>
+<arg>Set To Dictionary</arg>
+<arg>${MyList}</arg>
+<arg>${FileName}</arg>
+<arg>${FileName}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.996" endtime="20220909 16:10:06.996"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${sheetcheck} == ${false}</arg>
+<arg>Create Xlsx Sheet and Its Columns</arg>
+<arg>${file_name}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.996" endtime="20220909 16:10:06.996"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${DataRestRating}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${FirstRecord}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.996" endtime="20220909 16:10:06.996"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${DataRestRating}</arg>
+<arg>Data is Available</arg>
+<arg>ELSE</arg>
+<arg>Data is NOT Available</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.996" endtime="20220909 16:10:06.996"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Page}1</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.996" endtime="20220909 16:10:06.996"/>
+</kw>
+<kw name="My loop">
+<status status="NOT RUN" starttime="20220909 16:10:06.996" endtime="20220909 16:10:06.996"/>
+</kw>
+<kw name="Second MyLoop">
+<status status="NOT RUN" starttime="20220909 16:10:06.996" endtime="20220909 16:10:06.996"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${GoogleHomePage}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220909 16:10:06.996" endtime="20220909 16:10:06.996"/>
+</kw>
+<status status="NOT RUN" starttime="20220909 16:10:06.993" endtime="20220909 16:10:06.996"/>
+</iter>
+<status status="NOT RUN" starttime="20220909 16:10:06.993" endtime="20220909 16:10:06.996"/>
+</for>
+<status status="FAIL" starttime="20220909 16:09:59.356" endtime="20220909 16:10:06.997">No keyword with name 'Get Input Query' found.</status>
+</test>
+<status status="FAIL" starttime="20220909 16:09:58.982" endtime="20220909 16:10:06.998"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Abctcone">Abctcone</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220909 16:09:59.307" level="ERROR">Error in file 'C:\Users\rwankhede\PycharmProjects\Data_Generation\Testcases\abctcone.robot' on line 5: Importing library 'openpyxl' failed: ModuleNotFoundError: No module named 'openpyxl'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310\lib\site-packages</msg>
+<msg timestamp="20220909 16:09:59.326" level="ERROR">Error in file 'C:\Users\rwankhede\PycharmProjects\Data_Generation\Testcases\abctcone.robot' on line 6: Importing library 'C:\Users\rwankhede\PycharmProjects\Data_Generation\Resources\Input.py' failed: ModuleNotFoundError: No module named 'openpyxl'
+Traceback (most recent call last):
+  File "C:\Users\rwankhede\PycharmProjects\Data_Generation\Resources\Input.py", line 2, in &lt;module&gt;
+    from openpyxl import load_workbook
+PYTHONPATH:
+  C:\Users\rwankhede\PycharmProjects\Data_Generation\Resources
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310\lib\site-packages</msg>
+<msg timestamp="20220909 16:09:59.332" level="ERROR">Error in file 'C:\Users\rwankhede\PycharmProjects\Data_Generation\Testcases\abctcone.robot' on line 7: Importing library 'C:\Users\rwankhede\PycharmProjects\Data_Generation\Resources\DataRepository.py' failed: ModuleNotFoundError: No module named 'openpyxl'
+Traceback (most recent call last):
+  File "C:\Users\rwankhede\PycharmProjects\Data_Generation\Resources\DataRepository.py", line 2, in &lt;module&gt;
+    from openpyxl import Workbook, load_workbook
+PYTHONPATH:
+  C:\Users\rwankhede\PycharmProjects\Data_Generation\Resources
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310
+  C:\Users\rwankhede\AppData\Local\Programs\Python\Python310\lib\site-packages</msg>
+</errors>
+</robot>
